@@ -40,10 +40,19 @@ public class SwipeBackView extends View {
     }
 
     private void init(Context context) {
-        Activity activity = (Activity) context;
+        final Activity activity = (Activity) context;
         rootView = activity.getWindow().getDecorView();
         touchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         scroller = new Scroller(context, new DecelerateInterpolator());
+
+        swipeBackListener = new SwipeBackListener() {
+            @Override
+            public void onSwipeBack() {
+                activity.finish();
+                activity.overridePendingTransition(
+                        R.anim.nothing, R.anim.out_slide_to_right);
+            }
+        };
     }
 
     @Override

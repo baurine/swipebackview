@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import com.baurine.swipebackview.SwipeBackView;
-
 public class DetailActivity extends AppCompatActivity {
 
     private static final String KEY_BG_COLOR = "KEY_BG_COLOR";
@@ -43,15 +41,17 @@ public class DetailActivity extends AppCompatActivity {
         Drawable drawable = getResources().getDrawable(bgColorResId);
         findViewById(R.id.rl_root).setBackground(drawable);
         ((ImageView) findViewById(R.id.iv_icon)).setImageResource(iconResId);
-        ((SwipeBackView) findViewById(R.id.swipe_back_view)).setSwipeBackListener(
-                new SwipeBackView.SwipeBackListener() {
-                    @Override
-                    public void onSwipeBack() {
-                        finish();
-                        overridePendingTransition(R.anim.nothing,
-                                R.anim.out_slide_to_right);
-                    }
-                }
-        );
+        // if you want define custom activity in and out animation,
+        // then set yourself SwipeBackListener
+        // ((SwipeBackView) findViewById(R.id.swipe_back_view)).setSwipeBackListener(
+        //         new SwipeBackView.SwipeBackListener() {
+        //             @Override
+        //             public void onSwipeBack() {
+        //                 finish();
+        //                 overridePendingTransition(R.anim.nothing,
+        //                         R.anim.out_slide_to_right);
+        //             }
+        //         }
+        // );
     }
 }
