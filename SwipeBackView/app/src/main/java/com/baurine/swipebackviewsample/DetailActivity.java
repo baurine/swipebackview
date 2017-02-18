@@ -41,7 +41,7 @@ public class DetailActivity extends AppCompatActivity {
         Drawable drawable = getResources().getDrawable(bgColorResId);
         findViewById(R.id.rl_root).setBackground(drawable);
         ((ImageView) findViewById(R.id.iv_icon)).setImageResource(iconResId);
-        // if you want define custom activity in and out animation,
+        // if you want define custom activity enter and exit animation,
         // then set yourself SwipeBackListener
         // ((SwipeBackView) findViewById(R.id.swipe_back_view)).setSwipeBackListener(
         //         new SwipeBackView.SwipeBackListener() {
