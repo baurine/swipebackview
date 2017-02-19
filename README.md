@@ -6,6 +6,8 @@ A very simple and less feature custom view to help swipe back the activity. It i
 
 ## Note
 
+core code: [SwipeBackView.java](./SwipeBackView/swipebackview/src/main/java/com/baurine/swipebackview/SwipeBackView.java)
+
 Implementation thinking: 
 
 - handle the view touch event in `onTouchEvent()`;
