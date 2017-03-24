@@ -53,5 +53,6 @@ public class DetailActivity extends AppCompatActivity {
         //             }
         //         }
         // );
+        // findViewById(R.id.swipe_back_view).setEnabled(false);
     }
 }

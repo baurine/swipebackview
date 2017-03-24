@@ -60,7 +60,7 @@ public class SwipeBackView extends View {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 lastX = event.getRawX();
-                return true;
+                return isEnabled();
             case MotionEvent.ACTION_MOVE:
                 float curX = event.getRawX();
                 int delta = (int) (curX - lastX);
